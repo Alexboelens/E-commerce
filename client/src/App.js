@@ -31,7 +31,7 @@ const App = () => {
     }
     // es-lint-disable-next-line
   }, [])
-  console.log(currentUser)
+
   return (
     <div>
       <Header currentUser={currentUser} />
