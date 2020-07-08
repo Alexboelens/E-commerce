@@ -4,7 +4,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user-actions'
 import Header from './components/header/header'
-import HomePage from './pages/homepage/homepage';
+// import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shop/shopPage';
 import CheckoutPage from './pages/checkout/checkout';
 import SingInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up';
@@ -41,7 +41,7 @@ const App = ({ setCurrentUser, currentUser }) => {
       <Header />
 
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route exact path='/' component={ShopPage} />
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SingInAndSignUpPage />)} />
