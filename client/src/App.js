@@ -10,6 +10,7 @@ import SingInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user-selector';
+import HomePage from './pages/home/home';
 
 const App = ({ setCurrentUser, currentUser }) => {
 
@@ -40,7 +41,7 @@ const App = ({ setCurrentUser, currentUser }) => {
       <Header />
 
       <Switch>
-        <Route exact path='/' component={ShopPage} />
+        <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SingInAndSignUpPage />)} />
