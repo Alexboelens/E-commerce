@@ -4,7 +4,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user-actions'
 import Header from './components/header/header'
-import HomePage from './pages/homepage/homePage';
+import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shop/shopPage';
 import CheckoutPage from './pages/checkout/checkout';
 import SingInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up';
