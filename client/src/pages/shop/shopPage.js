@@ -11,8 +11,7 @@ const ShopPage = ({ match, fetchCollectionsStartAsync }) => {
 
     useEffect(() => {
         fetchCollectionsStartAsync()
-        // eslint-disable-next-line
-    }, [])
+    }, [fetchCollectionsStartAsync])
 
     return (
         <div className='shop-page'>
